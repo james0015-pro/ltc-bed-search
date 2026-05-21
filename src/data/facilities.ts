@@ -42,6 +42,7 @@ export const facilities: Facility[] = [
       "藥事服務"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["出院準備銜接長照", "社區整合型服務", "交通接送服務"],
     "latitude": 25.05,
     "longitude": 121.515,
     "establishedYear": 2005,
@@ -97,6 +98,7 @@ export const facilities: Facility[] = [
       "心理諮商"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["出院準備銜接長照", "社區整合型服務", "居家喘息服務", "輔具及無障礙環境改善"],
     "latitude": 25.12,
     "longitude": 121.52,
     "establishedYear": 1998,
@@ -136,6 +138,7 @@ export const facilities: Facility[] = [
       "藥事服務"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["出院準備銜接長照"],
     "latitude": 25.07,
     "longitude": 121.59,
     "establishedYear": 2000,
@@ -174,6 +177,7 @@ export const facilities: Facility[] = [
       "營養諮詢"
     ],
     "acceptsGovernmentSubsidy": false,
+    "ltc3Features": ["交通接送服務"],
     "latitude": 25.058,
     "longitude": 121.526,
     "establishedYear": 2010,
@@ -210,6 +214,7 @@ export const facilities: Facility[] = [
       "傷口照護"
     ],
     "acceptsGovernmentSubsidy": false,
+    "ltc3Features": [],
     "latitude": 24.99,
     "longitude": 121.56,
     "establishedYear": 2012,
@@ -254,6 +259,7 @@ export const facilities: Facility[] = [
       "社工服務"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["社區整合型服務", "出院準備銜接長照"],
     "latitude": 25.02,
     "longitude": 121.46,
     "establishedYear": 2008,
@@ -292,6 +298,7 @@ export const facilities: Facility[] = [
       "營養諮詢"
     ],
     "acceptsGovernmentSubsidy": false,
+    "ltc3Features": ["交通接送服務"],
     "latitude": 25.055,
     "longitude": 121.485,
     "establishedYear": 2003,
@@ -328,6 +335,7 @@ export const facilities: Facility[] = [
       "傷口照護"
     ],
     "acceptsGovernmentSubsidy": false,
+    "ltc3Features": [],
     "latitude": 25.035,
     "longitude": 121.435,
     "establishedYear": 2015,
@@ -385,6 +393,7 @@ export const facilities: Facility[] = [
       "心理諮商"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["出院準備銜接長照", "社區整合型服務", "居家喘息服務", "輔具及無障礙環境改善", "交通接送服務"],
     "latitude": 25.06,
     "longitude": 121.37,
     "establishedYear": 1995,
@@ -423,6 +432,7 @@ export const facilities: Facility[] = [
       "營養諮詢"
     ],
     "acceptsGovernmentSubsidy": false,
+    "ltc3Features": [],
     "latitude": 24.96,
     "longitude": 121.23,
     "establishedYear": 2011,
@@ -473,6 +483,7 @@ export const facilities: Facility[] = [
       "心理諮商"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["出院準備銜接長照", "社區整合型服務", "居家喘息服務", "輔具及無障礙環境改善"],
     "latitude": 24.18,
     "longitude": 120.62,
     "establishedYear": 2002,
@@ -512,6 +523,7 @@ export const facilities: Facility[] = [
       "營養諮詢"
     ],
     "acceptsGovernmentSubsidy": false,
+    "ltc3Features": ["外籍看護家庭社區服務"],
     "latitude": 24.175,
     "longitude": 120.69,
     "establishedYear": 2009,
@@ -559,6 +571,7 @@ export const facilities: Facility[] = [
       "藥事服務"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["出院準備銜接長照", "社區整合型服務", "交通接送服務"],
     "latitude": 23.0,
     "longitude": 120.22,
     "establishedYear": 2004,
@@ -608,6 +621,7 @@ export const facilities: Facility[] = [
       "藥事服務"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["出院準備銜接長照", "社區整合型服務", "居家喘息服務", "輔具及無障礙環境改善"],
     "latitude": 22.68,
     "longitude": 120.31,
     "establishedYear": 2001,
@@ -645,6 +659,7 @@ export const facilities: Facility[] = [
       "失智照護"
     ],
     "acceptsGovernmentSubsidy": false,
+    "ltc3Features": ["交通接送服務"],
     "latitude": 22.64,
     "longitude": 120.3,
     "establishedYear": 2013,
@@ -684,6 +699,7 @@ export const facilities: Facility[] = [
       "社工服務"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["社區整合型服務", "外籍看護家庭社區服務"],
     "latitude": 24.07,
     "longitude": 120.54,
     "establishedYear": 2006,
@@ -733,6 +749,7 @@ export const facilities: Facility[] = [
       "心理諮商"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["出院準備銜接長照", "社區整合型服務", "居家喘息服務", "輔具及無障礙環境改善", "外籍看護家庭社區服務"],
     "latitude": 23.99,
     "longitude": 121.59,
     "establishedYear": 1999,
@@ -771,6 +788,7 @@ export const facilities: Facility[] = [
       "營養諮詢"
     ],
     "acceptsGovernmentSubsidy": false,
+    "ltc3Features": [],
     "latitude": 24.68,
     "longitude": 121.77,
     "establishedYear": 2014,
@@ -809,6 +827,7 @@ export const facilities: Facility[] = [
       "營養諮詢"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["社區整合型服務"],
     "latitude": 22.68,
     "longitude": 120.49,
     "establishedYear": 2007,
@@ -848,6 +867,7 @@ export const facilities: Facility[] = [
       "社工服務"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["社區整合型服務", "出院準備銜接長照"],
     "latitude": 23.48,
     "longitude": 120.45,
     "establishedYear": 2008,
@@ -886,6 +906,7 @@ export const facilities: Facility[] = [
       "營養諮詢"
     ],
     "acceptsGovernmentSubsidy": true,
+    "ltc3Features": ["出院準備銜接長照"],
     "latitude": 25.13,
     "longitude": 121.75,
     "establishedYear": 2010,

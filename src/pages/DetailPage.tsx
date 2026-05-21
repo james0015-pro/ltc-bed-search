@@ -1,8 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { ArrowLeft, MapPin, Phone, Globe, Bed, Calendar, Shield, Award, Banknote, Clock, Users } from 'lucide-react';
+import { ArrowLeft, MapPin, Phone, Globe, Bed, Shield, Award, Banknote, Clock, Users } from 'lucide-react';
 import { fetchFacilityById } from '@/lib/api';
-import { cn, formatCurrency, formatNumber } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 import type { Facility } from '@/types';
 
 export function DetailPage() {
@@ -188,6 +188,56 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
               {s}
             </span>
           ))}
+        </div>
+      </div>
+
+      {/* LTC 3.0 Eligibility */}
+      {f.ltc3Features.length > 0 && (
+        <div className="bg-surface border border-border rounded-xl p-5 mb-6">
+          <h2 className="text-sm font-medium text-text-primary mb-3 flex items-center gap-2">
+            🏥 長照 3.0 服務
+          </h2>
+          <div className="text-xs text-text-muted mb-3">
+            此機構提供以下長照 3.0 特色服務，符合資格的民眾可申請政府補助或補貼。
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {f.ltc3Features.map(feat => (
+              <div key={feat} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-500/5 border border-blue-500/15">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
+                <span className="text-sm text-blue-300 font-medium">{feat}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Policy Alerts */}
+      <div className="bg-warning/5 border border-warning/20 rounded-xl p-5 mb-6">
+        <h2 className="text-sm font-medium text-text-primary mb-3 flex items-center gap-2">
+          ⚠️ 政策動態提醒
+        </h2>
+        <div className="space-y-3 text-xs text-text-muted leading-relaxed">
+          <div className="flex items-start gap-2">
+            <span className="text-warning mt-0.5 shrink-0">⚠</span>
+            <div>
+              <p className="font-medium text-warning">住宿機構補助每月 18,000 元卡關中</p>
+              <p>此補助案目前仍在立法院審議，尚未三讀通過。約 10 萬名長者受影響，通過時間未定。現行補助依長照等級最高每月 36,000 元（居家/社區）或住宿機構每月最高 22,000 元（中低收入戶）。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-warning mt-0.5 shrink-0">⚠</span>
+            <div>
+              <p className="font-medium text-warning">三班護病比入法影響（2027 年實施）</p>
+              <p>衛福部推動「三班護病比」法制化，強制規定早/晚/大夜班護理人力配置。部分小型機構可能因人力成本上升而縮減床位或歇業，預計影響全台約 15% 住宿型機構。建議優先選擇已有充足護理人力配置的機構。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">智慧科技輔具補助（2026 年 7 月上路）</p>
+              <p>衛福部新增智慧輔具補助項目：AI 照護監測系統、遠距健康管理、智慧輔具租賃，每案最高補助 5 萬元。詳情請洽各縣市長照管理中心。</p>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -41,6 +41,15 @@ export interface BedInfo {
   lastUpdated: string;    // 更新時間 ISO
 }
 
+/** 長照 3.0 服務標籤 */
+export type LTC3Feature =
+  | '外籍看護家庭社區服務'    // 外籍看護家庭可申請社區式服務
+  | '出院準備銜接長照'        // 住院→長照無縫銜接
+  | '社區整合型服務'          // A 單位 / 個案管理
+  | '居家喘息服務'            // 家庭照顧者喘息
+  | '交通接送服務'            // 長照專車接送
+  | '輔具及無障礙環境改善';   // 居家無障礙補助
+
 /** 長照機構 */
 export interface Facility {
   id: string;
@@ -57,6 +66,7 @@ export interface Facility {
   ratingYear: number;
   services: string[];       // e.g., ['復健', '洗腎', '管路照護']
   acceptsGovernmentSubsidy: boolean;
+  ltc3Features: LTC3Feature[];  // 長照 3.0 特色服務
   latitude: number;
   longitude: number;
   establishedYear: number;
@@ -71,6 +81,7 @@ export interface SearchFilters {
   maxFee?: number;
   rating?: Rating;
   services?: string[];
+  ltc3Features?: LTC3Feature[];
   subsidy?: boolean;
 }
 

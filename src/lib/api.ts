@@ -33,6 +33,13 @@ export async function fetchFacilities(
   }
   if (filters.subsidy) result = result.filter(f => f.acceptsGovernmentSubsidy);
 
+  // LTC 3.0 features filter
+  if (filters.ltc3Features?.length) {
+    result = result.filter(f =>
+      filters.ltc3Features!.every(ltc => f.ltc3Features?.includes(ltc) ?? false)
+    );
+  }
+
   // Search
   if (query.trim()) {
     const q = query.trim().toLowerCase();
@@ -55,10 +62,11 @@ export async function fetchFacilities(
     case 'fee_desc':
       result.sort((a, b) => Math.min(...b.fees.map(x => x.monthly)) - Math.min(...a.fees.map(x => x.monthly)));
       break;
-    case 'rating':
+    case 'rating': {
       const rank: Record<string, number> = { '優等': 5, '甲等': 4, '乙等': 3, '丙等': 2, '丁等': 1, '未評鑑': 0 };
       result.sort((a, b) => (rank[b.rating] || 0) - (rank[a.rating] || 0));
       break;
+    }
     case 'name':
       result.sort((a, b) => a.name.localeCompare(b.name, 'zh-TW'));
       break;

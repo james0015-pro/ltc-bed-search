@@ -1,14 +1,22 @@
 import { useState, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
-import { Search, SlidersHorizontal, MapPin, Phone, Bed, Shield, ChevronRight, X } from 'lucide-react';
+import { Search, SlidersHorizontal, MapPin, Phone, Bed, X } from 'lucide-react';
 import { fetchFacilities } from '@/lib/api';
-import { cn, formatCurrency, formatNumber } from '@/lib/utils';
-import type { City, FacilityType, Rating, SortBy, Facility } from '@/types';
+import { cn, formatCurrency } from '@/lib/utils';
+import type { City, FacilityType, Rating, SortBy, Facility, LTC3Feature } from '@/types';
 
 const CITIES: City[] = ['臺北市','新北市','桃園市','臺中市','臺南市','高雄市','基隆市','新竹市','苗栗縣','彰化縣','南投縣','雲林縣','嘉義市','屏東縣','宜蘭縣','花蓮縣','臺東縣','澎湖縣','金門縣'];
 const TYPES: FacilityType[] = ['護理之家','長照中心','養護中心','安養中心','日照中心','失智專區','安寧病房'];
 const RATINGS: Rating[] = ['優等','甲等','乙等','丙等'];
+const LTC3_FEATURES: { value: LTC3Feature; label: string; brief: string }[] = [
+  { value: '外籍看護家庭社區服務', label: '外籍看護友善', brief: '外籍看護家庭可申請社區式服務' },
+  { value: '出院準備銜接長照', label: '出院銜接', brief: '住院→長照無縫銜接' },
+  { value: '社區整合型服務', label: '社區整合', brief: 'A 單位個案管理' },
+  { value: '居家喘息服務', label: '居家喘息', brief: '家庭照顧者支持' },
+  { value: '交通接送服務', label: '交通接送', brief: '長照專車接送' },
+  { value: '輔具及無障礙環境改善', label: '輔具補助', brief: '居家無障礙改善' },
+];
 const SORT_OPTIONS: { value: SortBy; label: string }[] = [
   { value: 'availability', label: '空床最多' },
   { value: 'fee_asc', label: '費用最低' },
@@ -26,6 +34,7 @@ export function HomePage() {
   const [rating, setRating] = useState<Rating | ''>('');
   const [sortBy, setSortBy] = useState<SortBy>('availability');
   const [showFilters, setShowFilters] = useState(false);
+  const [ltc3Features, setLtc3Features] = useState<LTC3Feature[]>([]);
 
   const filters = useMemo(() => ({
     ...(city && { city: city as City }),
@@ -33,17 +42,28 @@ export function HomePage() {
     ...(minBeds > 0 && { minBeds }),
     ...(maxFee > 0 && { maxFee }),
     ...(rating && { rating: rating as Rating }),
-  }), [city, type, minBeds, maxFee, rating]);
+    ...(ltc3Features.length > 0 && { ltc3Features }),
+  }), [city, type, minBeds, maxFee, rating, ltc3Features]);
 
   const { data: facilities, isLoading } = useQuery({
     queryKey: ['facilities', filters, sortBy, query],
     queryFn: () => fetchFacilities(filters, sortBy, query),
   });
 
-  const hasFilters = city || type || minBeds > 0 || maxFee > 0 || rating;
+  const hasFilters = city || type || minBeds > 0 || maxFee > 0 || rating || ltc3Features.length > 0;
 
   return (
     <div>
+      {/* Policy Alert Banner */}
+      <div className="bg-warning/5 border border-warning/20 rounded-lg p-3 mb-4 text-xs text-text-muted leading-relaxed flex flex-wrap items-start gap-2">
+        <span className="text-warning shrink-0 mt-0.5">⚠️</span>
+        <span>
+          <strong>住宿補助每月 18,000 元仍在立院卡關</strong>（影響 10 萬長者）｜
+          <strong>三班護病比 2027 年入法</strong>（約 15% 住宿機構可能縮床或歇業）｜
+          <strong>智慧輔具補助 2026/7 上路</strong>（AI 照護／遠距監測，每案最高 5 萬）。
+        </span>
+      </div>
+
       {/* Search Bar */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         <div className="flex-1 relative">
@@ -130,6 +150,33 @@ export function HomePage() {
               ))}
             </div>
           </div>
+          <div className="sm:col-span-2 lg:col-span-4">
+            <label className="block text-xs text-text-muted mb-1">🏥 長照 3.0 服務（多選）</label>
+            <div className="flex flex-wrap gap-2">
+              {LTC3_FEATURES.map(f => {
+                const selected = ltc3Features.includes(f.value);
+                return (
+                  <button
+                    key={f.value}
+                    onClick={() => {
+                      setLtc3Features(prev =>
+                        selected ? prev.filter(v => v !== f.value) : [...prev, f.value]
+                      );
+                    }}
+                    title={f.brief}
+                    className={cn(
+                      'px-2.5 py-1 rounded text-xs font-medium border transition-colors',
+                      selected
+                        ? 'bg-primary-subtle border-primary text-primary'
+                        : 'bg-canvas border-border text-text-muted hover:border-primary/50'
+                    )}
+                  >
+                    {f.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       )}
 
@@ -138,7 +185,7 @@ export function HomePage() {
         <div className="flex items-center justify-between text-sm text-text-muted">
           <span>{isLoading ? '搜尋中...' : `共 ${facilities?.length || 0} 間機構`}</span>
           {hasFilters && (
-            <button onClick={() => { setCity(''); setType(''); setMinBeds(0); setMaxFee(0); setRating(''); }} className="flex items-center gap-1 text-primary hover:underline">
+            <button onClick={() => { setCity(''); setType(''); setMinBeds(0); setMaxFee(0); setRating(''); setLtc3Features([]); }} className="flex items-center gap-1 text-primary hover:underline">
               <X size={14} /> 清除篩選
             </button>
           )}
@@ -207,6 +254,13 @@ function FacilityCard({ facility: f }: { facility: Facility }) {
               <span className="text-[10px] text-text-muted">+{f.services.length - 4}</span>
             )}
           </div>
+          {f.ltc3Features.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-1.5">
+              {f.ltc3Features.map(feat => (
+                <span key={feat} className="px-1.5 py-0.5 rounded bg-blue-500/10 border border-blue-500/30 text-[10px] text-blue-400">{feat}</span>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="flex flex-col items-end gap-2 shrink-0">
