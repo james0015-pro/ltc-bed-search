@@ -259,6 +259,20 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
               <p>衛福部新增智慧輔具補助項目：AI 照護監測系統、遠距健康管理、智慧輔具租賃，每案最高補助 5 萬元。詳情請洽各縣市長照管理中心。</p>
             </div>
           </div>
+          <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">ATLife 2026 輔具暨長照展 — 13 萬人次創紀錄</p>
+              <p>2026 年 ATLife 台灣輔具暨長期照護大展吸引超過 13 萬人次參觀，創歷屆新高。展會重點：AI 照護機器人、遠距復健系統、智慧床墊監測，顯示高齡科技需求快速成長。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">國家級高齡研究中心雲林啟用（22.6 億）</p>
+              <p>斥資 22.6 億元打造的國家級高齡醫學研究中心 2026 年正式於雲林縣啟用，定位為亞太高齡照護研發樞紐。雲林近年成為長照政策核心實驗場域，在地機構可利用研究資源提升照護品質。</p>
+            </div>
+          </div>
         </div>
       </div>
 
