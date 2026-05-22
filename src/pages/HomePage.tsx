@@ -64,7 +64,10 @@ export function HomePage() {
           <strong>55 歲以上 6 萬元津貼放寬</strong>（新增失能評估彈性）｜
           <strong>智慧輔具補助 2026/7 上路</strong>（AI 照護／遠距監測，每案最高 5 萬）｜
           <strong>ATLife 2026 創 13 萬人次</strong>（高齡科技需求快增）｜
-          <strong>雲林高齡研究中心啟用</strong>（22.6 億亞太研發樞紐）。
+          <strong>雲林高齡研究中心啟用</strong>（22.6 億亞太研發樞紐）｜
+          <strong>高雄長照局倡議</strong>（全台首例地方政府專責長照機關）｜
+          <strong>失智病主法公聽會</strong>（預立醫囑新觀念影響機構服務契約）｜
+          <strong>崇仁醫專 87% 媒合率</strong>（長照人力極度搶手，可能推升機構收費）。
         </span>
       </div>
 

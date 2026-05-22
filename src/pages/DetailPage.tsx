@@ -273,6 +273,27 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
               <p>斥資 22.6 億元打造的國家級高齡醫學研究中心 2026 年正式於雲林縣啟用，定位為亞太高齡照護研發樞紐。雲林近年成為長照政策核心實驗場域，在地機構可利用研究資源提升照護品質。</p>
             </div>
           </div>
+          <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">高雄長照局倡議 — 全台首例潛力</p>
+              <p>高雄市議員跨黨派連署呼籲設立全台第一個地方政府直屬「長照局」，統籌照護資源分配與機構管理。陳其邁市長已正面回應允諾研議，若成局將為全台首例地方政府專責長照一級機關，可望打破目前長照資源多頭馬車的困境。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">失智病主法與預立醫囑新觀念</p>
+              <p>衛福部推動「失智病主法」草案（2026/5/22 公聽會），賦予失智症患者於輕度時期即預立醫療決定（Advance Care Planning）的法律權利，確保未來照護依其意願執行。另推廣「預立醫囑」觀念，讓民眾在健康時就能預先規劃未來醫療與照護方式。此將影響長照機構的服務契約設計與照護計畫擬定。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">崇仁醫專長照科 87% 媒合率創紀錄</p>
+              <p>嘉義崇仁醫護管理專科學校長照科 2026 年畢業生創下 87% 就業媒合率（較全台長照相關科系平均 62% 高出 25%），顯示專業訓練的長照人力極度搶手。此趨勢將加速住宿機構提高薪資待遇以留才，但同時可能推升機構收費。</p>
+            </div>
+          </div>
         </div>
       </div>
 
