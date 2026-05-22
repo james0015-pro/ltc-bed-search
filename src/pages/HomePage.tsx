@@ -58,8 +58,10 @@ export function HomePage() {
       <div className="bg-warning/5 border border-warning/20 rounded-lg p-3 mb-4 text-xs text-text-muted leading-relaxed flex flex-wrap items-start gap-2">
         <span className="text-warning shrink-0 mt-0.5">⚠️</span>
         <span>
+          <strong>全台長照床位缺口約 1.3 萬床</strong>（住宿式機構供不應求）｜
           <strong>住宿補助每月 18,000 元仍在立院卡關</strong>（影響 10 萬長者）｜
           <strong>三班護病比 2027 年入法</strong>（約 15% 住宿機構可能縮床或歇業）｜
+          <strong>55 歲以上 6 萬元津貼放寬</strong>（新增失能評估彈性）｜
           <strong>智慧輔具補助 2026/7 上路</strong>（AI 照護／遠距監測，每案最高 5 萬）。
         </span>
       </div>

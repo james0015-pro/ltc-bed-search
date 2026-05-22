@@ -218,6 +218,27 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
         </h2>
         <div className="space-y-3 text-xs text-text-muted leading-relaxed">
           <div className="flex items-start gap-2">
+            <span className="text-danger mt-0.5 shrink-0">🔴</span>
+            <div>
+              <p className="font-medium text-danger">全台長照床位缺口約 1.3 萬床</p>
+              <p>根據 CTWANT 2026/5/12 報導，台灣住宿式長照機構總床位供不應求，全國缺口約 1.3 萬床，六都尤為嚴重。建議家屬提前規劃，並同時排隊多間機構以增加入住機會。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">55 歲以上 6 萬元照護津貼放寬</p>
+              <p>衛福部放寬 55 歲以上民眾申請長期照護津貼資格，新增失能評估彈性標準，符合條件者每月最高可獲 6 萬元補助（依長照等級而定）。詳細資格請洽各縣市長照管理中心或撥打 1966 長照專線。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">照護自由選擇權 — 長照協會建言獲正面回應</p>
+              <p>台灣長照協會 2026/5/18 向陳時中政務委員建言，爭取重度失能者得自由選擇「居家照護」或「住宿機構」並獲政府平等補助，獲正面回應。此政策若通過，住宿式補助可能顯著提高，建議持續關注後續修法進度。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
             <span className="text-warning mt-0.5 shrink-0">⚠</span>
             <div>
               <p className="font-medium text-warning">住宿機構補助每月 18,000 元卡關中</p>
