@@ -329,6 +329,13 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
               <p>基隆市立醫院長照園區新建工程 2026/5 正式動工，打造全台首座「醫動養」（醫療+運動+長照）三合一示範園區。涵蓋 200 床住宿式長照、日間照顧中心、復健醫療大樓，總經費 12.6 億元。最大特色為「垂直整合」：急性醫療→亞急性復健→長照安養在同一園區內無縫銜接，解決傳統長照機構與醫院分離導致的轉院折騰問題。預計 2028 年完工啟用。</p>
             </div>
           </div>
+          <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">Medical Taiwan 2026 — AI 醫療 + 長照科技展（5/23 開放登記）</p>
+              <p>Medical Taiwan 2026 台灣國際醫療暨健康照護展即日起（5/23）開放參觀登記，6 月於台北南港展覽館舉辦。展會重點：AI 醫療診斷、長照科技應用（智慧床墊/遠距復健/AI 照護機器人）、智慧輔具最新產品。此展為智慧輔具補助 7 月上線前的最後一場大型專業展，家屬可提前了解即將納入補助的輔具品項與技術趨勢。線上登記免費，詳見 Medical Taiwan 官網。</p>
+            </div>
+          </div>
         </div>
       </div>
 
