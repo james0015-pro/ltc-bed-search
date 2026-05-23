@@ -294,6 +294,13 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
               <p>嘉義崇仁醫護管理專科學校長照科 2026 年畢業生創下 87% 就業媒合率（較全台長照相關科系平均 62% 高出 25%），顯示專業訓練的長照人力極度搶手。此趨勢將加速住宿機構提高薪資待遇以留才，但同時可能推升機構收費。</p>
             </div>
           </div>
+          <div className="flex items-start gap-2">
+            <span className="text-success mt-0.5 shrink-0">✨</span>
+            <div>
+              <p className="font-medium text-success">長照 3.0 擴大補助 — 外籍看護家庭可申請社區服務</p>
+              <p>衛福部長照 3.0 重大突破：打破過去「聘僱外籍看護即失去長照資格」的二元對立，外籍看護家庭現可同時申請社區式照顧服務（含居家服務、日間照顧、喘息服務），每案每月最高補助上看萬元。高雄市率先受益，約 1.9 萬戶外籍看護家庭即日起可至各區長照中心申請。全國政策預計 2026 下半年全面實施，為長照政策歷史性轉折。</p>
+            </div>
+          </div>
         </div>
       </div>
 
