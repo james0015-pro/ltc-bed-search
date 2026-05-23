@@ -68,6 +68,7 @@ export function HomePage() {
           <strong>高雄長照局倡議</strong>（全台首例地方政府專責長照機關）｜
           <strong>失智病主法公聽會</strong>（預立醫囑新觀念影響機構服務契約）｜
           <strong>長照 3.0 擴大補助</strong>（外籍看護家庭可申請社區服務，最高萬元/月）｜
+          <strong>長照保險不開辦／民團籲財源入法</strong>（稅收制 vs 保險制爭議持續，財源穩定性成隱憂）｜
           <strong>崇仁醫專 87% 媒合率</strong>（長照人力極度搶手，可能推升機構收費）。
         </span>
       </div>

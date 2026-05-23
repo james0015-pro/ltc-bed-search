@@ -302,6 +302,13 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
             </div>
           </div>
           <div className="flex items-start gap-2">
+            <span className="text-warning mt-0.5 shrink-0">⚠</span>
+            <div>
+              <p className="font-medium text-warning">長照 3.0 不推保險制 — 民團籲財源入法固定預算</p>
+              <p>衛福部定調長照 3.0 維持現行稅收撥補制（2026/5/18），不開辦長照保險（健保附加費方案已確定不予推動）。然而民間長照團體擔憂：無固定財源入法，長照基金易受年度預算波動影響，每當經濟不景氣或政黨輪替即可能遭刪減。民團呼籲參照日本「介護保險法」模式，將長照財源比（政府/僱主/個人）明確入法，確保每年編列達 GDP 一定比例。此爭議將持續影響長照服務品質與機構經營穩定性。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
             <span className="text-success mt-0.5 shrink-0">✨</span>
             <div>
               <p className="font-medium text-success">長照 3.0 擴大補助 — 外籍看護家庭可申請社區服務</p>
