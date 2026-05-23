@@ -61,7 +61,7 @@ export function HomePage() {
           <strong>全台長照床位缺口約 1.3 萬床</strong>（住宿式機構供不應求）｜
           <strong>住宿補助每月 18,000 元仍在立院卡關</strong>（影響 10 萬長者）｜
           <strong>三班護病比 2027 年入法</strong>（約 15% 住宿機構可能縮床或歇業）｜
-          <strong>55 歲以上 6 萬元津貼放寬</strong>（新增失能評估彈性）｜
+          <strong>55 歲以上 6 萬元津貼放寬</strong>（新增失能評估彈性，衛福部澄清與長照 3.0 不排擠／長照保險不開辦）｜
           <strong>智慧輔具補助 2026/7 上路</strong>（AI 照護／遠距監測，每案最高 5 萬）｜
           <strong>ATLife 2026 創 13 萬人次</strong>（高齡科技需求快增）｜
           <strong>雲林高齡研究中心啟用</strong>（22.6 億亞太研發樞紐）｜

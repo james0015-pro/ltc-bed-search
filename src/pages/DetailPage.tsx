@@ -239,6 +239,13 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
             </div>
           </div>
           <div className="flex items-start gap-2">
+            <span className="text-info mt-0.5 shrink-0">ℹ</span>
+            <div>
+              <p className="font-medium text-info">衛福部澄清：55+ 成長津貼不排擠長照 3.0</p>
+              <p>衛福部 2026/5/15-21 多次澄清（自由時報、聯合報）：55 歲以上 6 萬元照護津貼與長照 3.0 為獨立預算，津貼來自社福基金（就業安定與社會救助），長照 3.0 由長照基金支應，互不排擠。另長照基金維持現行稅收撥補制，不會開辦長照保險（健保附加費方案已確定不予推動）。民眾可同時申請津貼與長照服務，無須擔心選 A 失 B。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
             <span className="text-warning mt-0.5 shrink-0">⚠</span>
             <div>
               <p className="font-medium text-warning">住宿機構補助每月 18,000 元卡關中</p>
