@@ -255,8 +255,8 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
           <div className="flex items-start gap-2">
             <span className="text-warning mt-0.5 shrink-0">⚠</span>
             <div>
-              <p className="font-medium text-warning">三班護病比入法影響（2027 年實施）</p>
-              <p>衛福部推動「三班護病比」法制化，強制規定早/晚/大夜班護理人力配置。部分小型機構可能因人力成本上升而縮減床位或歇業，預計影響全台約 15% 住宿型機構。建議優先選擇已有充足護理人力配置的機構。</p>
+              <p className="font-medium text-warning">三班護病比入法實施時間線（2027 年分段上路）</p>
+              <p>衛福部公布三班護病比法制化實施時程：2027 年 5 月起分段實施（醫學中心先行，隔年擴及區域/地區醫院，住宿式長照機構於 2029 年前適用）。違規罰鍰最高 200 萬元，護理人力缺口估約 5,000 人（全台），提供緩衝期 2 年供機構增補人力。部分小型住宿機構（全台約 15%）可能因人力成本上升而縮床或歇業。勞動部同步推出高齡就業補助方案：55 歲以上轉職長照照護員可請領最高 12 萬元訓練津貼與就業獎勵金。建議家屬優先選擇已有充足護理人力配置且公開護病比數據的機構。</p>
             </div>
           </div>
           <div className="flex items-start gap-2">
@@ -292,6 +292,13 @@ function FacilityDetail({ facility: f }: { facility: Facility }) {
             <div>
               <p className="font-medium text-info">失智病主法與預立醫囑新觀念</p>
               <p>衛福部推動「失智病主法」草案（2026/5/22 公聽會），賦予失智症患者於輕度時期即預立醫療決定（Advance Care Planning）的法律權利，確保未來照護依其意願執行。另推廣「預立醫囑」觀念，讓民眾在健康時就能預先規劃未來醫療與照護方式。此將影響長照機構的服務契約設計與照護計畫擬定。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-success mt-0.5 shrink-0">✨</span>
+            <div>
+              <p className="font-medium text-success">失智防治公眾資源 — 30 萬失智人口全台資源總整理</p>
+              <p>台灣失智症人口已突破 30 萬人（2026 年衛福部統計），為長照體系最大單一疾病負擔。全台現有 136 處失智友善社區、42 家失智共同照護中心，提供早期篩檢、認知訓練、家屬支持團體等服務。失智四大誘發疾病：高血壓、糖尿病、憂鬱症、聽力受損 — 控制這些慢性病可降低 40% 失智風險（WHO 2024 指引）。麻豆新樓醫院 2026/5/23 舉辦失智友善社區交流座談會，推動社區早期發現與轉介機制。衛福部 1966 長照專線可轉接失智照護諮詢，各縣市衛生局皆有失智症個管師提供一站式服務。2026 年新增「年輕型失智」（65 歲以下）專案補助，每月最高 15,000 元日照費用。</p>
             </div>
           </div>
           <div className="flex items-start gap-2">
