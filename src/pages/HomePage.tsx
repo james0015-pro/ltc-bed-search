@@ -74,7 +74,8 @@ export function HomePage() {
           <strong>崇仁醫專 87% 媒合率</strong>（長照人力極度搶手，可能推升機構收費）｜
           <strong>千億長照 3.0 接不住照顧者</strong>（UDN 5/23 民意論壇：預算成長≠品質提升，偏鄉 47 鄉鎮無住宿機構）｜
           <strong>基隆市立醫院長照園區動工</strong>（12.6 億／200 床／醫動養三合一，2028 完工）｜
-          <strong>Medical Taiwan 2026</strong>（5/23 開放登記，6 月南港展館，AI 醫療+長照科技+智慧輔具展）。
+          <strong>Medical Taiwan 2026</strong>（5/23 開放登記，6 月南港展館，AI 醫療+長照科技+智慧輔具展）｜
+          <strong>花蓮/彰化/新北長照政策</strong>（花蓮原民部落長照 78% 涵蓋率/彰化三箭含機構加碼補助/侯友宜里長通報系統）。
         </span>
       </div>
 
